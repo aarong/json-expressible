@@ -8,6 +8,16 @@ jobs:
   include:
     - stage: Test
       language: node_js
+      node_js: "2"
+      script:
+        - npm run test
+    - stage: Test
+      language: node_js
+      node_js: "4"
+      script:
+        - npm run test
+    - stage: Test
+      language: node_js
       node_js: "6"
       script:
         - npm run test
