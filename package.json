@@ -1,6 +1,6 @@
 {
   "name": "json-expressible",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Micro library that determines whether a value can be expressed as JSON.",
   "main": "index.js",
   "scripts": {
