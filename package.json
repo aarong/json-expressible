@@ -1,0 +1,41 @@
+{
+  "name": "json-expressible",
+  "version": "1.0.0",
+  "description": "Micro library that determines whether a value can be expressed as JSON.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint *.js && jasmine tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aarong/json-expressible.git"
+  },
+  "keywords": [
+    "JSON"
+  ],
+  "author": "Aaron G",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aarong/json-expressible/issues"
+  },
+  "homepage": "https://github.com/aarong/json-expressible#readme",
+  "dependencies": {
+    "check-types": "^10.0.0",
+    "ghooks": "^2.0.4",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "eslint": "^5.12.0",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-es5": "^1.3.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jasmine": "^3.4.0",
+    "prettier": "^1.14.3"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test"
+    }
+  }
+}
