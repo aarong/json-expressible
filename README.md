@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/aarong/json-expressible.svg?branch=master)](https://travis-ci.com/aarong/json-expressible)
+
 # JSON-Expressible
 
 An ES5 Javascript micro library that determines whether a value can be expressed
