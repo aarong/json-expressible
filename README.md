@@ -13,6 +13,16 @@ as JSON.
 
 - Checks whether there are any circular references.
 
+The motivation for this library is twofold:
+
+1. The `JSON.stringify()` function does not throw an error when it encounters
+   non-JSON values like `undefined` and `NaN`. Instead, it omits the values or
+   converts them to `null` in the returned serialization. As a result, parsing
+   the serialization does not return the original value.
+
+2. It can be useful to know whether a value is expressible in JSON without
+   actually serializing it.
+
 To install:
 
 ```shell
