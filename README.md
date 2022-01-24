@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/aarong/json-expressible.svg?branch=master)](https://travis-ci.com/aarong/json-expressible)
+[![Build Status](https://travis-ci.com/aarong/json-expressible.svg?branch=master)](https://travis-ci.com/github/aarong/json-expressible)
 
 # JSON-Expressible
 
