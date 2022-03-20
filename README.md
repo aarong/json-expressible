@@ -49,6 +49,9 @@ console.log(jsonExpressible([1, 2, 3]));
 console.log(jsonExpressible(undefined));
 console.log(jsonExpressible(NaN));
 console.log(jsonExpressible(function () {}));
+console.log(jsonExpressible(new Date()));
+console.log(jsonExpressible(Infinity));
+console.log(jsonExpressible(/reg.ex/));
 
 console.log(jsonExpressible([ undefined ]));
 console.log(jsonExpressible({ abc: undefined }));

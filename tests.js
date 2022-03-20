@@ -10,6 +10,13 @@ describe("The jsonExpressible() function", function() {
     expect(jsonExpressible(undefined)).toBe(false);
     expect(jsonExpressible(NaN)).toBe(false);
     expect(jsonExpressible(function() {})).toBe(false);
+    expect(jsonExpressible(new Date())).toBe(false);
+    expect(jsonExpressible(Infinity)).toBe(false);
+    expect(jsonExpressible(Number.POSITIVE_INFINITY)).toBe(false);
+    expect(jsonExpressible(/reg.ex/)).toBe(false);
+    expect(jsonExpressible(new Map())).toBe(false);
+    expect(jsonExpressible(new Set())).toBe(false);
+    expect(jsonExpressible(new Int16Array())).toBe(false);
   });
 
   it("should return correctly for objects", function() {
@@ -80,6 +87,9 @@ describe("The jsonExpressible() function", function() {
     console.log(jsonExpressible(undefined));
     console.log(jsonExpressible(NaN));
     console.log(jsonExpressible(function() {}));
+    console.log(jsonExpressible(new Date()));
+    console.log(jsonExpressible(Infinity));
+    console.log(jsonExpressible(/reg.ex/));
 
     console.log(jsonExpressible([undefined]));
     console.log(jsonExpressible({ abc: undefined }));
