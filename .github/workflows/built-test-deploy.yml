@@ -17,6 +17,5 @@ jobs:
       # Publish takes place only if new version tag
       - uses: JS-DevTools/npm-publish@v3
         with:
-          package: . # Path
           token: ${{ secrets.NPM_TOKEN }}
  
