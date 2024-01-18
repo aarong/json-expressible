@@ -1,7 +1,7 @@
 var jsonExpressible = require(".");
 
-describe("The jsonExpressible() function", function() {
-  it("should return correctly for non-objects/arrays", function() {
+describe("The jsonExpressible() function", function () {
+  it("should return correctly for non-objects/arrays", function () {
     expect(jsonExpressible(null)).toBe(true);
     expect(jsonExpressible("string")).toBe(true);
     expect(jsonExpressible(123)).toBe(true);
@@ -9,7 +9,7 @@ describe("The jsonExpressible() function", function() {
 
     expect(jsonExpressible(undefined)).toBe(false);
     expect(jsonExpressible(NaN)).toBe(false);
-    expect(jsonExpressible(function() {})).toBe(false);
+    expect(jsonExpressible(function () {})).toBe(false);
     expect(jsonExpressible(new Date())).toBe(false);
     expect(jsonExpressible(Infinity)).toBe(false);
     expect(jsonExpressible(Number.POSITIVE_INFINITY)).toBe(false);
@@ -19,7 +19,7 @@ describe("The jsonExpressible() function", function() {
     expect(jsonExpressible(new Int16Array())).toBe(false);
   });
 
-  it("should return correctly for objects", function() {
+  it("should return correctly for objects", function () {
     expect(jsonExpressible({ a: 123 })).toBe(true);
     expect(jsonExpressible({ a: undefined })).toBe(false);
     expect(jsonExpressible({ a: { b: 123 } })).toBe(true);
@@ -28,7 +28,7 @@ describe("The jsonExpressible() function", function() {
     expect(jsonExpressible({ a: [undefined] })).toBe(false);
   });
 
-  it("should return correctly for arrays", function() {
+  it("should return correctly for arrays", function () {
     expect(jsonExpressible([123])).toBe(true);
     expect(jsonExpressible([undefined])).toBe(false);
     expect(jsonExpressible([[123]])).toBe(true);
@@ -37,7 +37,7 @@ describe("The jsonExpressible() function", function() {
     expect(jsonExpressible([{ a: undefined }])).toBe(false);
   });
 
-  it("should correctly detect circular references", function() {
+  it("should correctly detect circular references", function () {
     expect(jsonExpressible({ a: true, b: 123 })).toBe(true);
     expect(jsonExpressible([true, 123])).toBe(true);
     expect(jsonExpressible([true, [null], { a: [] }])).toBe(true);
@@ -72,7 +72,7 @@ describe("The jsonExpressible() function", function() {
     expect(jsonExpressible(val)).toBe(false);
   });
 
-  it("sample code should work", function() {
+  it("sample code should work", function () {
     // The following return true
 
     console.log(jsonExpressible("abc"));
@@ -86,7 +86,7 @@ describe("The jsonExpressible() function", function() {
 
     console.log(jsonExpressible(undefined));
     console.log(jsonExpressible(NaN));
-    console.log(jsonExpressible(function() {}));
+    console.log(jsonExpressible(function () {}));
     console.log(jsonExpressible(new Date()));
     console.log(jsonExpressible(Infinity));
     console.log(jsonExpressible(/reg.ex/));
