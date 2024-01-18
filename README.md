@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/aarong/json-expressible.svg?branch=master)](https://travis-ci.com/github/aarong/json-expressible)
+[![CI-CD](https://github.com/aarong/json-expressible/actions/workflows/built-test-deploy.yml/badge.svg)](https://github.com/aarong/json-expressible/actions/workflows/built-test-deploy.yml)
 
 # JSON-Expressible
 
