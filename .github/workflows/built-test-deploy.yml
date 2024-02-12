@@ -19,5 +19,4 @@ jobs:
       - uses: JS-DevTools/npm-publish@v3        
         if: startsWith(github.event.ref, 'refs/tags/v')
         with:
-          package: build # Path
           token: ${{ secrets.NPM_TOKEN }} 
